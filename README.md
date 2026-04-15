@@ -22,7 +22,7 @@ Doubly Linked List
 1. Open the folder
 2. Double-click `contact.exe`
 
-👉 No compiler required
+No compiler required
 
 ---
 
