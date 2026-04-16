@@ -5,7 +5,7 @@
 struct Node {
     char name[50];
     char phone[15];
-    char type; // C or S
+    char type;
     struct Node *next;
     struct Node *prev;
 };
@@ -41,6 +41,10 @@ void insertRecord() {
 /* Display */
 void showRecords() {
     struct Node *temp = head;
+     if(head == NULL) {
+        printf("No records found.\n");
+        return;
+    }
 
     while (temp != NULL) {
         printf("\nName: %s\nPhone: %s\nType: %c\n",
@@ -115,16 +119,24 @@ int main() {
     int ch;
 
     do {
-        printf("------Business Conatcts Management System------\n");
+        printf("------Business Conatacts Management System------\n");
         printf("\n1.Add\n2.Display\n3.Search\n4.Delete\n5.Filter\n6.Exit\n");
         scanf("%d", &ch);
 
         switch(ch) {
-            case 1: insertRecord(); break;
-            case 2: showRecords(); break;
-            case 3: findRecord(); break;
-            case 4: removeRecord(); break;
-            case 5: filterType(); break;
+            case 1: insertRecord();
+            break;
+            case 2: showRecords();
+            break;
+            case 3: findRecord();
+            break;
+            case 4: removeRecord();
+            break;
+            case 5: filterType();
+            break;
+            case 6: printf("Thank You!\n");
+            break;
+            default: printf("Invalid choice!\n");
         }
 
     } while(ch != 6);
