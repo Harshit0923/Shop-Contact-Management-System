@@ -119,7 +119,7 @@ int main() {
     int ch;
 
     do {
-        printf("------Business Conatacts Management System------\n");
+        printf("------Business Contacts Management System------\n");
         printf("\n1.Add\n2.Display\n3.Search\n4.Delete\n5.Filter\n6.Exit\n");
         scanf("%d", &ch);
 
