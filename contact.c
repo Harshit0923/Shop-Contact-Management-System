@@ -20,7 +20,7 @@ void insertRecord() {
     scanf("%s", newNode->name);
     printf("Enter phone: ");
     scanf("%s", newNode->phone);
-    printf("Enter type (C=Customer, S=Supplier): ");
+    printf("Enter type: ");
     scanf(" %c", &newNode->type);
 
     newNode->next = NULL;
@@ -59,7 +59,7 @@ void findRecord() {
 
     while (temp != NULL) {
         if (strcmp(temp->name, name) == 0) {
-            printf("Found: %s %s %c\n",
+            printf("Found: %s\n%s\n%c\n",
                    temp->name, temp->phone, temp->type);
             return;
         }
@@ -98,7 +98,7 @@ void removeRecord() {
 /* Filter  */
 void filterType() {
     char t;
-    printf("Enter type (C/S): ");
+    printf("Enter type: ");
     scanf(" %c", &t);
 
     struct Node *temp = head;
@@ -115,7 +115,8 @@ int main() {
     int ch;
 
     do {
-        printf("\n1.Add 2.Display 3.Search 4.Delete 5.Filter 6.Exit\n");
+        printf("------Business Conatcts Management System------\n");
+        printf("\n1.Add\n2.Display\n3.Search\n4.Delete\n5.Filter\n6.Exit\n");
         scanf("%d", &ch);
 
         switch(ch) {
